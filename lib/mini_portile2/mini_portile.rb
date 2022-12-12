@@ -13,7 +13,7 @@ require 'shellwords'
 # https://github.com/ruby/ruby/commit/58835a9
 class Net::HTTP
   private
-  remove_method(:edit_path) if defined?(:edit_path)
+  # remove_method(:edit_path) #if defined?(:edit_path)
   def edit_path(path)
     if proxy?
       if path.start_with?("ftp://") || use_ssl?
